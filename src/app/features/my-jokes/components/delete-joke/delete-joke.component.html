@@ -1,0 +1,20 @@
+<app-modal title="Potwierdzenie">
+	<div class="delete-joke-wrapper">
+		<p class="information">
+			Czy na pewno chcesz usunąć wybrany zart?
+		</p>
+		<div class="buttons-wrapper flex-end">
+			<app-button
+				text="Nie"
+				[color]="cancelButtonColor"
+				[action]="handleCloseModal"
+			>
+			</app-button>
+			<app-button
+				text="Tak"
+				[action]="handleDeleteJoke"
+			>
+			</app-button>
+		</div>
+	</div>
+</app-modal>

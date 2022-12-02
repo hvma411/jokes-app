@@ -1,0 +1,33 @@
+@media screen and (min-width: 0) {
+	.button {
+		border: none;
+		font-size: 0.75rem;
+		font-weight: 700;
+		border-radius: 8px;
+		text-align: center;
+		padding: 8px 12px;
+		cursor: pointer;
+	}
+
+	.transparent {
+		background: transparent;
+		color: #FFCC15;
+	}
+
+	.accept {
+		background: #FFCC15;
+		color: black;
+	}
+
+	.danger {
+		background: #E44C4C;
+		color: white;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.button {
+		font-size: 1rem;
+		padding: 12px 36px;
+	}
+}

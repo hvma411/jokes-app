@@ -1,0 +1,25 @@
+<header class="header">
+	<div class="logo-wrapper">
+		<img class="logo" src="assets/logo.png" alt="Logo">
+	</div>
+	<ul class="menu-wrapper">
+		<li>
+			<a
+				class="menu-el"
+				routerLink="/" 
+				[ngClass]="isCurrentRouteActive('/') ? 'menu-el--active' : ''"
+			>
+				Żarty
+			</a>
+		</li>
+		<li>
+			<a
+				class="menu-el"
+				routerLink="/my-jokes"
+				[ngClass]="isCurrentRouteActive('/my-jokes') ? 'menu-el--active' : ''"
+			>
+				Moje żarty
+			</a>
+		</li>
+	</ul>
+</header>

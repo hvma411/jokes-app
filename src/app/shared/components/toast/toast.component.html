@@ -1,0 +1,14 @@
+<div
+	class="toast"
+	[ngClass]="color"
+>
+	<h3 class="title">
+		{{ title }}
+	</h3>
+	<p class="message">
+		{{ message }}
+	</p>
+	<div class="close-button" (click)="handleCloseModal()">
+		<span class="close-button--inner"></span>
+	</div>
+</div>

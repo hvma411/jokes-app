@@ -1,0 +1,30 @@
+<app-page-wrapper>
+	<div class="row flex-start">
+		<app-button
+			text="Dodaj"
+			[action]="openAddNewJokeModal"
+		>
+		</app-button>
+	</div>
+	<div class="row">
+		<app-joke
+			[category]="getCurrentJokeCategory()"
+			[joke]="getCurrentJoke()"
+		>
+		</app-joke>
+	</div>
+	<div class="row buttons-wrapper" [ngClass]="currentJokeIdx > 0 ? 'space-between' : 'flex-end'">
+		<app-button
+			*ngIf="currentJokeIdx > 0"
+			text="Pokaż poprzedni"
+			[action]="handlePrevJoke"
+		>
+		</app-button>
+		<app-button
+			*ngIf="currentJokeIdx < jokes.length - 1"
+			text="Pokaż następny"
+			[action]="handleNextJoke"
+		>
+		</app-button>
+	</div>
+</app-page-wrapper>

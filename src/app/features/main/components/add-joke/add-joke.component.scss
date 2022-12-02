@@ -1,0 +1,46 @@
+@media screen and (min-width: 0) {
+	.add-joke-wrapper {
+		width: 100%;
+	
+		form {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+	
+			select,
+			textarea {
+				width: 100%;
+				padding: 16px;
+				font-size: 0.85rem;
+				outline: none;
+				color: #6D6D6D;
+				background: white;
+				border: 1px solid rgba(109, 109, 109, 0.4);
+				margin-bottom: 16px;
+			}
+	
+			textarea {
+				height: 200px;
+				resize: none;
+				margin-bottom: 32px;
+			}
+		}
+	
+		.buttons-wrapper {
+			width: 100%;
+			gap: 16px;
+		}
+	
+	}
+}
+
+@media screen and (min-width: 769px) {
+	.add-joke-wrapper {
+		width: 500px;
+
+		.buttons-wrapper {
+			justify-content: flex-end;
+		}
+	}
+}
+

@@ -1,0 +1,26 @@
+<app-modal title="Dodawanie żartu">
+	<div class="add-joke-wrapper">
+		<form [formGroup]="jokeFormGroup">
+			<select formControlName="category">
+				<option [value]="null" selected disabled>Wybierz kategorię</option>
+				<option *ngFor="let category of categories" [value]="category.id">
+					{{ category.name }}
+				</option>
+			</select>
+			<textarea formControlName="content" placeholder="Wprowadź treść żartu"></textarea>
+		</form>
+		<div class="buttons-wrapper flex-end">
+			<app-button
+				text="Anuluj"
+				[color]="cancelButtonColor"
+				[action]="handleCloseModal"
+			>
+			</app-button>
+			<app-button
+				text="Dodaj"
+				[action]="handleAddJoke"
+			>
+			</app-button>
+		</div>
+	</div>
+</app-modal>

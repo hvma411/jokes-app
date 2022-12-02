@@ -1,0 +1,20 @@
+@media screen and (min-width: 0) {
+	.delete-joke-wrapper {
+		width: 100%;
+	
+		.information {
+			font-size: 1rem;
+			text-align: center;
+		}
+	 
+		.buttons-wrapper {
+			margin-top: 32px;
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.delete-joke-wrapper {
+		min-width: 600px;
+	}
+}

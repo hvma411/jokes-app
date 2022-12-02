@@ -1,0 +1,19 @@
+<div
+	class="joke"
+	[ngClass]="myJokeView ? 'my-joke-view' : ''"
+>
+	<div class="category-wrapper">
+		kategoria: <h2 class="category">{{ category }}</h2>
+	</div>
+	<div class="joke-content-wrapper">
+		<p>{{ joke }}</p>
+	</div>
+	<div class="button-wrapper flex-end">
+		<app-button
+			*ngIf="myJokeView"
+			text="Usuń"
+			[color]="deleteButtonColor"
+			[action]="handleOpenDeleteJokeModal"
+		></app-button>
+	</div>
+</div>

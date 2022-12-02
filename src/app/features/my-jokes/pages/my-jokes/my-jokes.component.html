@@ -1,0 +1,27 @@
+<app-page-wrapper>
+	<div class="row flex-start">
+		<app-button
+			text="Dodaj"
+			[action]="openAddNewJokeModal"
+		>
+		</app-button>
+	</div>
+	<div class="row fake-grid">
+		<div class="fake-grid--col">
+			<app-joke
+				*ngFor="let joke of getJokesForColumn(0)"
+				[category]="getCurrentJokeCategory(joke.category)"
+				[joke]="joke.content"
+				[myJokeView]="true"
+			></app-joke>
+		</div>
+		<div class="fake-grid--col">
+			<app-joke
+				*ngFor="let joke of getJokesForColumn(1)"
+				[category]="getCurrentJokeCategory(joke.category)"
+				[joke]="joke.content"
+				[myJokeView]="true"
+			></app-joke>
+		</div>
+	</div>
+</app-page-wrapper>
